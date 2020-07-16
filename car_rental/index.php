@@ -5,6 +5,8 @@
 </head>
 <body>
 
+	<button type="button"><a href="add_new_car.php">add car</a></button><br>
+
 	<?php
 		include 'actions/db_connecting.php';
 
