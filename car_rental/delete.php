@@ -1,7 +1,8 @@
 <?php
 	require_once 'actions/db_connecting.php';
 
-	if($_GET['id']) {
+	if($_GET["id"]) {
+		$id = $_GET["id"]
 
 		$sql = "DELETE FROM cars WHERE id = $id";
 

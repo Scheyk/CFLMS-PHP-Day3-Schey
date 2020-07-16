@@ -1,8 +1,7 @@
 <?php
 	require_once 'actions/db_connecting.php';
 
-	if($_GET) {
-
+	if($_GET["id"]) {
 		$id = $_GET["id"];
 
 		$sql = "SELECT * FROM cars WHERE id = $id";
@@ -20,12 +19,12 @@
 <body>
 
 	<form action="actions/function_update_car.php" method="post">
-		<input type="hidden" value="<?php echo $row['id']?>">
+		<input type="hidden" name="id" value="<?php echo $row['id']?>">		
 		<input type="text" name="company" value="<?php echo $row['company']?>"><br>
 		<input type="text" name="typ" value="<?php echo $row['typ']?>"><br>
 		<input type="date" name="year_of" value="<?php echo $row['year_of']?>"><br>
 		<input type="number" name="price" value="<?php echo $row['price']?>"><br>
-		<input type="boolean" name="arrivel" value="<?php echo $row['arrivel']?>"><br>
+		<input type="text" name="arrivel" value="<?php echo $row['arrivel']?>"><br>
 		<input type="submit">
 	</form>
 
